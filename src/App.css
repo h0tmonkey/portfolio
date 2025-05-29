@@ -2,6 +2,8 @@
   --orange: #ff6700;
   --yellow: #ffd700;
   --black: #171717;
+  --success: #50c878;
+  --error: #b22222;
 }
 /* Custom fonts  */
 @font-face {
@@ -87,14 +89,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: var(--color-background);
+  background-color: var(--black);
 }
 nav.navbar a.navbar-brand {
   width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: var(--color-white) !important;
+  color: var(--yellow) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -122,7 +124,7 @@ span.navbar-text {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  border: 1px solid var(--color-white-half);
+  border: 1px solid var(--yellow);
   position: relative;
 }
 .social-icon a::before {
@@ -158,19 +160,19 @@ nav.navbar .navbar-toggler-icon {
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--yellow);
   transition: all 300ms linear;
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--yellow);
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
   height: 2px;
-  background-color: var(--color-white);
+  background-color: var(--yellow);
   top: 0;
   left: 0;
   content: "";
@@ -333,7 +335,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   background-color: var(--black);
 }
-.project h2 {
+.project h1 {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
@@ -358,8 +360,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   content: "";
   background: linear-gradient(
     90.21deg,
-    var(--color-gradient-start) -5.91%,
-    var(--color-gradient-end) 111.58%
+    var(--yellow) -5.91%,
+    var(--black) 111.58%
   );
   opacity: 0.85;
   position: absolute;
@@ -404,4 +406,163 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
+}
+/************ Contact Css ************/
+.contact {
+  background: linear-gradient(
+    90.21deg,
+    var(--yellow) -5.91%,
+    var(-- --black) 111.58%
+  );
+  padding: 60px 0 200px 0;
+}
+.contact img {
+  width: 92%;
+}
+.contact h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  background: var(--black);
+  border: 1px solid var(--yellow);
+  border-radius: 20px;
+  color: var(--yellow);
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  background: var(--yellow);
+  color: var(--black);
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--yellow);
+}
+.contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+  color: var(--yellow);
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--yellow);
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: var(--yellow);
+}
+.contact form button::before {
+  content: "";
+  background: var(--black);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+p.success {
+  color: var(--success);
+}
+
+p.danger {
+  color: var(--error);
+}
+/************ Footer Css ************/
+.footer {
+  padding: 0 0 50px 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer img {
+  width: 25%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--yellow);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+.footer-bx {
+  background: var(--yellow);
+  border-radius: 55px;
+  color: var(--black);
+  padding: 70px 125px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+}
+.footer-bx h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+}
+.footer-bx button {
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--yellow);
+  border: 1px solid var(--color-project-bg);
+  padding: 20px 100px;
+  font-size: 18px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.footer-bx button span {
+  z-index: 1;
+  position: relative;
+}
+.footer-bx button:hover {
+  color: var(--yellow);
+}
+.footer-bx button::before {
+  content: "";
+  background: var(--black);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.footer-bx button:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 50px 0 50px 0;
+  }
+
+  .footer img {
+    margin-bottom: 50px;
+  }
 }
