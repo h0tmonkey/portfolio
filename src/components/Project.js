@@ -19,12 +19,6 @@ const Project = () => {
       url: "https://github.com/h0tmonkey/chat",
     },
     {
-      title: "Weather app",
-      description: "Development",
-      imgUrl: weathermobile,
-      url: "https://github.com/h0tmonkey/weather-doner-mobile",
-    },
-    {
       title: "Movie",
       description: "Development & design",
       imgUrl: movie,
@@ -59,6 +53,12 @@ const Project = () => {
       description: "Development",
       imgUrl: admin,
       url: "https://github.com/h0tmonkey/adminpanel",
+    },
+    {
+      title: "Weather app",
+      description: "Development",
+      imgUrl: weathermobile,
+      url: "https://github.com/h0tmonkey/weather-doner-mobile",
     },
   ];
   return (
